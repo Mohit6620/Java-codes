@@ -3,8 +3,11 @@ public class first {
         int a = 20, b = 10, c;
         c = max(a, b);//formal parameters
         System.out.println(c);
-        first obj=new first(); //creating object for the class first
-        System.out.println(obj.ave(a, b)); // calling method with the object
+        first obj=new first();
+        
+        //creating object for the class first
+        System.out.println(obj.ave(a, b));
+         // calling method with the object
         int A[]={2,3,4,5,61};
         update(A); //passing object as parameter in the method 
         System.out.println("changed index of a "+A[0]);
@@ -23,7 +26,10 @@ public class first {
         //calling variable arguments
         show();
         show(1,2,3,5);
+        show_1("ram","shyam","geeta","sita");
        
+        //recursive function
+        rec(4);
 
 
         
@@ -109,6 +115,20 @@ double area (int a,int b,int c){
        
     } 
 }
+static void show_1(String...name){
+    for (String x:name){
+        System.out.println("names of candidates "  +x);
+    }
+}
+// recursive methods --method calling itself 
+static  void rec(int n){
+    if (n>0){
+        rec(n-1);
+        System.out.print(n);
+    }
+   
+ }
+ 
 
 }
 //actual parameter will not be modified if the value of formal parameter will change
