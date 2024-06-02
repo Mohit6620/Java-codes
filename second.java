@@ -18,8 +18,8 @@ public class second {
         h1.add();
 
         //constructor class calling
-        example e1=new example(1,20);//calling parameterized constructor
-        example e2=new example();//calling non parameterized constructor
+        // example e1=new example(1,20);//calling parameterized constructor
+        // example e2=new example();//calling non parameterized constructor
         
         //question
         cyclinder c1=new cyclinder();
@@ -120,8 +120,7 @@ class example {
     int a;
     int c;
     public example (){ //non-parameterized constructor
-        int a=45;
-        int c=50;
+       
     }
     public example (int a,int c){ //parameterized constructor
         
