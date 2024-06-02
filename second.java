@@ -17,6 +17,33 @@ public class second {
         h1.settwo(50);//setting two value 
         h1.add();
 
+        //constructor class calling
+        example e1=new example(1,20);//calling parameterized constructor
+        example e2=new example();//calling non parameterized constructor
+        
+        //question
+        cyclinder c1=new cyclinder();
+        cyclinder c2=new cyclinder(50);
+        cyclinder c3=new cyclinder(10, 20);
+        cyclinder c4[]=new cyclinder[4];//creatig objects in an array
+        c4[0]=new cyclinder(50);
+        c4[1]=new cyclinder(50);
+        c4[2]=new cyclinder(10, 20);
+
+        // for(cyclinder s:c4){ by using for loop we can access it 
+        //     System.out.println(s);
+
+        // }
+
+       System.out.println("area with default parameter"+c1.area()); 
+       System.out.println("area with only one parameter"+c2.area());         
+       System.out.println("area with  two parameter"+c3.area());         
+       System.out.println("peri with default parameter"+c1.peri()); 
+       System.out.println("peri with only one parameter"+c2.peri());         
+       System.out.println("peri with  two parameter"+c3.peri());         
+        
+        
+
     
     }    
 }
@@ -88,4 +115,63 @@ class hiding {
         return one+two;
     }
 } 
-// CONSTRUCTOR 
+// CONSTRUCTOR  -- method of class , whenever object of class is created then the constructor is created , same name as class name      
+class example {
+    int a;
+    int c;
+    public example (){ //non-parameterized constructor
+        int a=45;
+        int c=50;
+    }
+    public example (int a,int c){ //parameterized constructor
+        
+    }
+    
+}
+
+//qraduestion
+class cyclinder {
+    private int  radius ;
+    private int height ;
+
+    public int getRadius (){
+        
+        return radius;
+    }
+    public void setRadius (int r){
+        radius=r;
+    
+    }
+    public int getHeight (){
+        
+        return height;
+    }
+    public void setHeight (int h){
+        height=h;
+    
+    }
+    public cyclinder(){
+        radius=0;
+        height =0;
+    }
+    public cyclinder (int r){
+        radius=r;
+        height=1;
+    }
+    public cyclinder (int r,int h){
+        radius=r;
+        height=h;
+    }
+    public double area(){
+        double c= Math.PI*radius*radius;
+        return c;
+    }
+    public double peri(){
+      double d= 2*Math.PI*radius*radius;
+      return d;
+   }
+
+
+
+    
+}
