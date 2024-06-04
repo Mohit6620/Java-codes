@@ -7,8 +7,8 @@
 public class third {
     public static void main(String[] args) {
         apple a1=new apple();
-        System.out.println("Calling fruit class into apple"a1.single());
-
+        a1.single();
+        a1.original();
     }
 }
 class fruit {
